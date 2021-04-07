@@ -67,7 +67,7 @@ header {
 }
 
 /* Portfolio */
-#Portfolio {
+#portfolio {
   background-color: #eceff1; /* 背景色#eceff1 */
 }
 
@@ -142,4 +142,41 @@ header {
 
 .bg-6 {
   background-image: url(img/webcamp-mother.png); /* 背景画像を設定する */
+}
+
+/* Feature */
+
+#feature#feature {
+  background-size: cover; /* 縦横比を維持したまま背景領域を埋め尽くす */
+  background-position: center; /* 背景画像を中央に配置 */
+}
+
+.strength-group {
+  display: flex; /* Flexboxの利用 */
+  width: 980px; /* 横幅980px */
+  padding: 30px 0 90px 0; /* 上に30px、右に0px、下に90px、左に0pxの内側余白 */
+  margin: 0 auto; /* 中央寄せ（左右に余白がないとできない） */
+}
+
+.strength {
+  width: 320px; /* 横幅320px */
+  margin-right: 10px; /* 右に10pxの外側余白 */
+  /* ↓ font-awesomeのアイコンに反映させるコード*/
+  text-align: center; /* 文字を中央揃えにする */
+  font-size: 60px; /* フォントサイズを、60pxに設定 */
+}
+
+.strength:last-child {
+  /* 兄弟要素のグループの中で最後の要素 */
+  margin-right: 0; /* 右に0pxの外側余白 */
+}
+
+.strength-title {
+  padding: 10px 0; /* 上下に10px、左右に0pxの内側余白 */
+  font-size: 20px; /* フォントサイズを、20pxに設定 */
+}
+
+.strength-text {
+  text-align: left; /* 文字を左揃えにする */
+  font-size: 16px; /* フォントサイズを、16pxに設定 */
 }
