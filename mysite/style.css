@@ -84,7 +84,7 @@ header {
   display: block; /* ブロック要素にする */
   width: 70px; /* 横幅70px */
   height: 3px; /* 高さ3px */
-  margin: 8px auto 0 auto; /* 上に8px、右は水平方向に中央寄せ、下に0px、左右は水平方向に中央寄せの内側余白 */
+  margin: 8px auto 0 auto; /* 上に8px、右は水平方向に中央寄せ、下に0px、左は水平方向に中央寄せの内側余白 */
   background-color: #ec715f; /* 背景色#ec715f */
 }
 
@@ -96,7 +96,7 @@ header {
 
 .production-group {
   display: flex; /* Flexboxの利用 */
-  flex-flow: row wrap; /* 横並び 複数行 */
+  flex-flow: row wrap; /* 横並び 複数行 */ /* ブロック要素にする */
   width: 920px; /* 横幅920px */
   padding: 30px 0 90px 0; /* 上に30px、右に0px、下に90px、左に0pxの内側余白 */
   margin: 0 auto; /* 中央寄せ（左右に余白がないとできない） */
@@ -266,4 +266,151 @@ footer {
   font-size: 16px; /* フォントサイズを、16pxに設定 */
   color: #fafafa; /* 文字色を#fafafaに変更 */
   text-align: center; /* 文字を中央揃えにする */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* 横幅90% */
+  }
+
+  .sp-none {
+    display: none; /* 画面上で非表示にする */
+  }
+
+  .left-content {
+    width: 100%; /* 横幅いっぱい */
+  }
+
+  .right-content {
+    width: 100%; /* 横幅いっぱい */
+  }
+
+  /* Header */
+
+  header {
+    height: 50px; /* 高さ50px */
+  }
+
+  .logo {
+    height: 50px; /* 高さ50px */
+  }
+
+  .menu-box {
+    width: 40px; /* 横幅40px */
+    height: 40px; /* 高さ40px */
+    margin-right: 5%; /* 右に5%の外側余白 */
+    border: 1px solid #fafafa; /* 周りに幅が1px・色が#fafafaの枠線を入れる */
+    margin-top: 5px; /* 上に5pxの外側余白 */
+    margin-bottom: 5px; /* 下に5pxの外側余白 */
+    margin-left: auto; /* 右寄せ */
+  }
+
+  .list-bar {
+    display: block; /* ブロック要素にする */
+    width: 25px; /* 横幅25px */
+    height: 2px; /* 高さ2px */
+    margin: 5px auto; /* 上下に5px、左右は水平方向に中央寄せの内側余白 */
+    background-color: #fafafa; /* 背景色#fafafa; */
+  }
+
+  .list-bar:first-child {
+    margin-top: 10px; /* 上に10pxの外側余白 */
+  }
+
+  .nav-list {
+    display: none; /* 画面上で非表示にする */
+    width: 100%; /* 横幅いっぱい */
+    line-height: 50px; /* 行の高さ50px */
+    border-bottom: 1px solid gray; /* 下のみ幅が1px・色がgrayの実線を入れる */
+    text-align: center; /* 文字を中央揃えにする */
+    background-color: rgba(0, 0, 0, 0.9); /* 背景色を半透明の黒にする */
+  }
+
+  .nav-list:last-child {
+    /* 兄弟要素のグループの中で最後の要素 */
+    border: none; /* ボーダーは表示されず、太さも0になる */
+  }
+
+  /* MainVisual */
+
+  #mv {
+    background-image: url(../img/code.png); /* 背景画像を設定する */
+  }
+
+  .mv-title {
+    font-size: 40px; /* フォントサイズを、40pxに設定 */
+  }
+
+  .mv-text {
+    font-size: 18px; /* フォントサイズを、18pxに設定 */
+  }
+
+  /* Portfolio */
+
+  .production-group {
+    width: 300px; /* 横幅300px */
+  }
+
+  .production {
+    margin-right: 0px; /* 右に0pxの外側余白 */
+  }
+
+  /* Feature */
+
+  #feature {
+    background-size: cover; /* 縦横比を維持したまま背景領域を埋め尽くす */
+    background-position: center; /* 背景画像を中央に配置 */
+  }
+
+  .strength-group {
+    flex-flow: row wrap; /* 横並び 複数行 */
+    width: 320px; /* 横幅320px */
+  }
+
+  .strength {
+    margin-top: 10px; /* 上に10pxの外側余白 */
+    margin-right: 0px; /* 右に0pxの外側余白 */
+  }
+
+  .strength:first-child {
+    /* 兄弟要素のグループの中で最初の要素 */
+    margin-top: 0; /* 上に0pxの外側余白 */
+  }
+
+  /* Profile */
+
+  .profile-group {
+    flex-flow: row wrap; /* 横並び 複数行 */
+    text-align: center; /* 文字を中央揃えにする */
+  }
+
+  .profile-group .left-content {
+    margin-bottom: 20px; /* 下に20pxの外側余白 */
+  }
+
+  /* Contact */
+
+  .contact-group {
+    flex-flow: row wrap; /* 横並び 複数行 */
+    width: 100%; /* 横幅いっぱい */
+    text-align: center; /* 文字を中央揃えにする */
+  }
+
+  .left-contact-content {
+    width: 100%; /* 横幅いっぱい */
+  }
+
+  .right-contact-content {
+    width: 100%; /* 横幅いっぱい */
+    margin-top: 20px; /* 上に20pxの外側余白 */
+  }
+
+  .right-contact-content .fa {
+    font-size: 50px; /* フォントサイズを、50pxに設定 */
+    margin-right: 8px; /* 右に8pxの外側余白 */
+  }
+
+  /* Footer */
 }
